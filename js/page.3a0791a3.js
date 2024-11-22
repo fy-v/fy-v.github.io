@@ -221,9 +221,9 @@ parcelRequire = function(e, r, t, n) {
 							.replace && (t = t.replace(g, "<$1></$2>")), n === e && (n = m
 								.test(t) && RegExp.$1), n in T || (n = "*"), (s = T[n])
 							.innerHTML = "" + t, o = r.each(l.call(s.childNodes),
-						function() {
-								s.removeChild(this)
-							})), R(i) && (a = r(o), r.each(i, function(t, e) {
+								function() {
+									s.removeChild(this)
+								})), R(i) && (a = r(o), r.each(i, function(t, e) {
 							b.indexOf(t) > -1 ? a[t](e) : a.attr(t, e)
 						})), o
 					}, O.Z = function(t, e) {
@@ -248,7 +248,7 @@ parcelRequire = function(e, r, t, n) {
 							});
 							else if (M(t)) i = [t], t = null;
 							else if (m.test(t)) i = O.fragment(t.trim(), RegExp.$1, n), t =
-							null;
+								null;
 							else {
 								if (n !== e) return r(n).find(t);
 								i = O.qsa(f, t)
@@ -303,7 +303,7 @@ parcelRequire = function(e, r, t, n) {
 						var n, i, o, a, s = [];
 						if (Z(t))
 							for (i = 0; i < t.length; i++) null != (n = e(t[i], i)) && s.push(
-							n);
+								n);
 						else
 							for (o in t) null != (n = e(t[o], o)) && s.push(n);
 						return (a = s).length > 0 ? r.fn.concat.apply([], a) : a
@@ -375,7 +375,7 @@ parcelRequire = function(e, r, t, n) {
 						},
 						filter: function(t) {
 							return $(t) ? this.not(this.not(t)) : r(c.call(this, function(
-							e) {
+								e) {
 								return O.matches(e, t)
 							}))
 						},
@@ -539,7 +539,7 @@ parcelRequire = function(e, r, t, n) {
 							return this.each(function() {
 								var n = r(this);
 								(t === e ? "none" == n.css("display") : t) ? n
-								.show(): n.hide()
+									.show(): n.hide()
 							})
 						},
 						prev: function(t) {
@@ -806,7 +806,7 @@ parcelRequire = function(e, r, t, n) {
 														e.type &&
 														"text/javascript" !==
 														e.type || e.src
-														)) {
+													)) {
 													var n = e
 														.ownerDocument ?
 														e.ownerDocument
@@ -884,7 +884,7 @@ parcelRequire = function(e, r, t, n) {
 							s.fn = i, s.sel = a, s.e in f && (i = function(t) {
 								var n = t.relatedTarget;
 								if (!n || n !== this && !e.contains(this, n))
-								return s.fn.apply(this, arguments)
+									return s.fn.apply(this, arguments)
 							}), s.del = u;
 							var l = u || i;
 							s.proxy = function(e) {
@@ -946,7 +946,7 @@ parcelRequire = function(e, r, t, n) {
 
 					function T(t, r) {
 						return !r && t.isDefaultPrevented || (r || (r = t), e.each(j, function(e,
-						n) {
+							n) {
 							var i = r[e];
 							t[e] = function() {
 								return this[n] = x, i && i.apply(r, arguments)
@@ -985,7 +985,7 @@ parcelRequire = function(e, r, t, n) {
 										}), r && (f = function(t) {
 											var n, a = e(t.target).closest(r, o).get(0);
 											if (a && a !== o) return n = e.extend(w(
-											t), {
+												t), {
 												currentTarget: a,
 												liveFired: o
 											}), (l || u).apply(a, [n].concat(i
@@ -1060,7 +1060,8 @@ parcelRequire = function(e, r, t, n) {
 					function m(t, e, n, r) {
 						var i = n.context;
 						n.success.call(i, t, "success", e), r && r.resolveWith(i, [t, "success",
-							e]), p(n, i, "ajaxSuccess", [e, n, t]), g("success", e, n)
+							e
+						]), p(n, i, "ajaxSuccess", [e, n, t]), g("success", e, n)
 					}
 
 					function v(t, e, n, r, i) {
@@ -1175,7 +1176,7 @@ parcelRequire = function(e, r, t, n) {
 								S) && (S.indexOf(",") > -1 && (S = S.split(",", 2)[0]), P
 								.overrideMimeType && P.overrideMimeType(S)), (b.contentType || !
 								1 !== b.contentType && b.data && "GET" != b.type.toUpperCase()
-								) && N("Content-Type", b.contentType ||
+							) && N("Content-Type", b.contentType ||
 								"application/x-www-form-urlencoded"), b.headers)
 							for (r in b.headers) N(r, b.headers[r]);
 						if (P.setRequestHeader = N, P.onreadystatechange = function() {
@@ -1186,7 +1187,8 @@ parcelRequire = function(e, r, t, n) {
 										0 == P.status && "file:" == O) {
 										if (j = j || ((r = b.mimeType || P.getResponseHeader(
 													"content-type")) && (r = r.split(";", 2)[
-												0]), r && (r == l ? "html" : r == c ? "json" : s
+													0]), r && (r == l ? "html" : r == c ?
+													"json" : s
 													.test(r) ? "script" : u.test(r) && "xml") ||
 												"text"), "arraybuffer" == P.responseType ||
 											"blob" == P.responseType) t = P.response;
@@ -1234,7 +1236,7 @@ parcelRequire = function(e, r, t, n) {
 							u = b(t, n, r),
 							c = u.success;
 						return s.length > 1 && (u.url = s[0], i = s[1]), u.success = function(
-						t) {
+							t) {
 							o.html(i ? e("<div>").html(t.replace(a, "")).find(i) : t), c &&
 								c.apply(o, arguments)
 						}, e.ajax(u), this
@@ -1251,8 +1253,8 @@ parcelRequire = function(e, r, t, n) {
 									u = e.isPlainObject(r);
 								e.each(r, function(r, c) {
 									a = e.type(c), o && (r = i ? o : o + "[" + (u ||
-												"object" == a || "array" == a ? r : ""
-												) + "]"), !o && s ? n.add(c.name, c
+											"object" == a || "array" == a ? r : ""
+										) + "]"), !o && s ? n.add(c.name, c
 											.value) : "array" == a || !i && "object" ==
 										a ? t(n, c, i, r) : n.add(r, c)
 								})
@@ -1269,7 +1271,8 @@ parcelRequire = function(e, r, t, n) {
 						};
 					return this[0] && e.each(this[0].elements, function(r, o) {
 						n = o.type, (t = o.name) && "fieldset" != o.nodeName
-						.toLowerCase() && !o.disabled && "submit" != n && "reset" != n &&
+							.toLowerCase() && !o.disabled && "submit" != n && "reset" !=
+							n &&
 							"button" != n && "file" != n && ("radio" != n && "checkbox" !=
 								n || o.checked) && i(e(o).val())
 					}), r
@@ -1308,10 +1311,62 @@ parcelRequire = function(e, r, t, n) {
 		var t = require("zepto").$;
 
 		function e() {
-			var e = ["希望能成为有趣的人", "给时光以生命<br>给岁月以文明", "你好，请多指教", "当你在凝视着网页的时候<br>网页也正在凝视着你", "苟……",
-					"ご注文はねこですか？", "平凡的日常正奇迹的发生着", "Lata<br>lulila<br>lulula<br>lulalila ♪♫",
-					"ただの人間には<br>興味ありません！", "さあ、ゲームを始めよう", "搞事！搞事！搞事！", "敬畏之心！", "赞美之心！", "我很好奇！",
-					"欢迎大家光临星象馆<br>这里有着无论何时永远不会消失<br>美丽的无穷光辉<br>满天的星星等候着大家的到来", "*舒缓的现代音乐*"
+			var e = ["希望能成为有趣的人",
+					"给时光以生命<br>给岁月以文明",
+					"为生活添一抹诗意，让平淡以浪漫。",
+					"你好，愿共成长。",
+					"当你在聆听世界的时候，世界也正在回应着你",
+					"静……",
+					"あなたの選択は何ですか？",
+					"琐碎的点滴正悄然地汇聚着",
+					"烦恼似云，吹散后便是晴空万里",
+					"挫折如浪，挺过去可见海阔天空",
+					"生活是书，用心翻阅才有精彩篇章",
+					"希望像光，哪怕微弱也能照亮前路",
+					"岁月如河，沉淀过后皆是珍贵回忆",
+					"快乐是花，用心浇灌方能绚丽绽放",
+					"梦想若星，抬头仰望便有前行方向",
+					"坚持为笔，能在人生画卷上绘就辉煌",
+					"善良是种，播撒开来可让世界芬芳",
+					"宽容如伞，撑开能为心灵遮风挡雨",
+					"信任似桥，搭建好可连通彼此心灵",
+					"努力作梯，顺着攀爬能达理想高度",
+					"勇气像风，鼓起便能推动前行之帆",
+					"感恩为泉，流淌之处皆是温暖情谊",
+					"微笑是匙，开启时可收获美好回应",
+					"时间如水，珍惜点滴才能汇聚成海",
+					"挫折是石，垫在脚下可让我们站得更高",
+					"等待若茶，慢慢品味才有醇厚韵味",
+					"思考如灯，点亮后可明晰前行的道路",
+					"分享是爱，传递出去能让幸福加倍",
+					"沉默似土，厚积薄发可孕育无限可能",
+					"乐观为光，照亮生活中每一处灰暗角落",
+					"智慧如刃，磨砺好了能斩断诸多困扰",
+					"改变是风，吹过之处能让旧貌换新颜",
+					"专注像针，穿引之间可编织成功之锦",
+					"心灵若镜，擦拭干净能映照世间美好",
+					"知足是秤，衡量好了可称出幸福重量",
+					"友谊似花，精心呵护才能长久盛开",
+					"机遇如风，及时抓住便能借力飞翔",
+					"谦逊为谷，低下身姿可容纳万物精华",
+					"热情如火，燃烧起来能让生活充满活力",
+					"凡俗的表象下，美好正潜藏着",
+					"さあ、旅を始めよう。",
+					"探索！探索！探索！",
+					"感恩之心！",
+					"包容之心！",
+					"我很期待！",
+					"给梦想以翅膀，给未来以翱翔",
+					"当你在拥抱黑夜的时候，黑夜也正在拥抱你",
+					"守……",
+					"これが私の道ですか？",
+					"微小的善意正温暖地蔓延着",
+					"简单的故事里，哲理正闪耀着",
+					"さあ、本を開けよう。",
+					"创造！创造！创造！",
+					"搞事！搞事！搞事！",
+					"敬畏之心！",
+					"赞美之心！",
 				],
 				i = o(0, e.length - 1);
 			t("#slogan").html(e[i])
