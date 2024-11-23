@@ -51,7 +51,7 @@
     </url>
     <!-- 小红书页面 -->
     <url>
-        <loc>https://www.xiaohongshu.com/user/profile/654c23d0000000000201001b?xhsshare=CopyLink&appuid=654c23d0000000000201001b&apptime=1729927757&share_id=5c758d46e8604abaa9dbb320676433c1</loc>
+        <loc>https://www.xiaohongshu.com/user/profile/654c23d0000000000201001b?xhsshare=CopyLink&amp;appuid=654c23d0000000000201001b&amp;apptime=1729927757&amp;share_id=5c758d46e8604abaa9dbb320676433c1</loc>
         <lastmod>2024-11-23</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
